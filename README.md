@@ -1,5 +1,5 @@
 <div align="center">
-12
+1
 <img src="https://github.com/TheDudeThatCode/TheDudeThatCode/raw/master/Assets/PC.gif" width="130" alt="Coding at night"/>
 
 # I'm Prince.
