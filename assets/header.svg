@@ -54,7 +54,7 @@
   </style>
 
   <!-- Upper label -->
-  <text x="750" y="72"
+  <text x="750" y="55"
         text-anchor="middle"
         font-family="Segoe UI, Arial, sans-serif"
         font-size="19"
