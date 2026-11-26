@@ -108,7 +108,7 @@ I learn by breaking things down to first principles, building working prototypes
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=E53E3E&height=100&section=footer&text=&animation=twinkling" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=C62828&height=100&section=footer&text=&animation=twinkling" width="100%" />
 
 <img src="https://komarev.com/ghpvc/?username=ZenxPrince&label=PROFILE+VIEWS&color=E53E3E&style=flat-square" alt="Profile views" />
 
