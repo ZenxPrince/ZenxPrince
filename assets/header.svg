@@ -1,142 +1,143 @@
 
 <svg xmlns="http://www.w3.org/2000/svg" width="1500" height="420" viewBox="0 0 1500 420">
   <defs>
-    <!-- Smoked translucent glass text -->
     <linearGradient id="smoke" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e9edf1" stop-opacity=".30"/>
-      <stop offset="18%" stop-color="#aeb9c4" stop-opacity=".18"/>
-      <stop offset="45%" stop-color="#65717d" stop-opacity=".10"/>
-      <stop offset="72%" stop-color="#343d47" stop-opacity=".16"/>
-      <stop offset="100%" stop-color="#d5dce3" stop-opacity=".24"/>
+      <stop offset="0%" stop-color="#edf2f6" stop-opacity=".48"/>
+      <stop offset="18%" stop-color="#bac5cf" stop-opacity=".29"/>
+      <stop offset="46%" stop-color="#778490" stop-opacity=".16"/>
+      <stop offset="75%" stop-color="#46515d" stop-opacity=".24"/>
+      <stop offset="100%" stop-color="#d9e1e8" stop-opacity=".38"/>
     </linearGradient>
 
-    <!-- Subtle internal reflective variation -->
-    <linearGradient id="reflection" x1="0" y1="0" x2="1" y2=".15">
+    <linearGradient id="reflection" x1="0" y1="0" x2="1" y2=".1">
       <stop offset="0%" stop-color="#ffffff" stop-opacity=".02"/>
-      <stop offset="25%" stop-color="#ffffff" stop-opacity=".23"/>
-      <stop offset="48%" stop-color="#dce5ed" stop-opacity=".055"/>
-      <stop offset="72%" stop-color="#ffffff" stop-opacity=".16"/>
+      <stop offset="24%" stop-color="#ffffff" stop-opacity=".30"/>
+      <stop offset="48%" stop-color="#dce5ed" stop-opacity=".08"/>
+      <stop offset="76%" stop-color="#ffffff" stop-opacity=".19"/>
       <stop offset="100%" stop-color="#ffffff" stop-opacity=".025"/>
     </linearGradient>
 
-    <!-- Glass rim -->
     <linearGradient id="rim" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#f4f7fa" stop-opacity=".70"/>
-      <stop offset="25%" stop-color="#b8c5d1" stop-opacity=".16"/>
-      <stop offset="60%" stop-color="#71808e" stop-opacity=".07"/>
-      <stop offset="100%" stop-color="#e4ebf2" stop-opacity=".45"/>
+      <stop offset="0%" stop-color="#f4f7fa" stop-opacity=".82"/>
+      <stop offset="28%" stop-color="#c4d0db" stop-opacity=".20"/>
+      <stop offset="65%" stop-color="#748391" stop-opacity=".09"/>
+      <stop offset="100%" stop-color="#e6edf4" stop-opacity=".52"/>
     </linearGradient>
 
-    <!-- Light dispersion -->
-    <filter id="glassText" x="-20%" y="-35%" width="140%" height="170%">
-      <feTurbulence
-        type="fractalNoise"
-        baseFrequency=".018 .04"
-        numOctaves="2"
-        seed="11"
-        result="noise"/>
-      <feDisplacementMap
-        in="SourceGraphic"
-        in2="noise"
-        scale="1.8"
-        xChannelSelector="R"
-        yChannelSelector="G"/>
+    <filter id="optical" x="-20%" y="-30%" width="140%" height="160%">
+      <feTurbulence type="fractalNoise"
+                    baseFrequency=".012 .035"
+                    numOctaves="2"
+                    seed="13"
+                    result="noise"/>
+      <feDisplacementMap in="SourceGraphic"
+                         in2="noise"
+                         scale="1.4"
+                         xChannelSelector="R"
+                         yChannelSelector="G"/>
     </filter>
 
-    <!-- Very subtle shadow -->
     <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="3"/>
     </filter>
 
-    <!-- Shared text -->
     <style>
-      .main {
+      .name {
         font-family: "Segoe UI", Arial, sans-serif;
         font-weight: 600;
-        letter-spacing: -3.8px;
+        letter-spacing: -4px;
       }
-      .small {
+      .sub {
         font-family: "Segoe UI", Arial, sans-serif;
         font-weight: 400;
       }
     </style>
   </defs>
 
-  <!-- Tiny upper identifier -->
-  <text x="118" y="110"
-        class="small"
-        font-size="11"
-        letter-spacing="4"
-        fill="#bfc9d2"
+  <!-- Golden-ratio aligned typography -->
+  <!-- Visual center: x=750, y=210 -->
+
+  <!-- Eyebrow -->
+  <text x="750" y="118"
+        class="sub"
+        font-size="12"
+        letter-spacing="5"
+        text-anchor="middle"
+        fill="#d0d9e1"
         fill-opacity=".52">
     INDEPENDENT ENGINEERING
   </text>
 
-  <!-- Main glass lettering shadow -->
-  <text x="110" y="225"
-        class="main"
-        font-size="78"
+  <!-- Name shadow -->
+  <text x="750" y="220"
+        class="name"
+        font-size="108"
+        text-anchor="middle"
         fill="#111820"
-        fill-opacity=".22"
+        fill-opacity=".25"
         filter="url(#shadow)">
     PRINCE VYAS
   </text>
 
-  <!-- Base translucent body -->
-  <text x="110" y="225"
-        class="main"
-        font-size="78"
+  <!-- Smoked glass body -->
+  <text x="750" y="220"
+        class="name"
+        font-size="108"
+        text-anchor="middle"
         fill="url(#smoke)"
         stroke="#dce5ed"
-        stroke-opacity=".19"
-        stroke-width=".75">
+        stroke-opacity=".26"
+        stroke-width=".85">
     PRINCE VYAS
   </text>
 
-  <!-- Reflected surface -->
-  <text x="110" y="225"
-        class="main"
-        font-size="78"
+  <!-- Internal reflection -->
+  <text x="750" y="220"
+        class="name"
+        font-size="108"
+        text-anchor="middle"
         fill="url(#reflection)"
-        fill-opacity=".55">
+        fill-opacity=".68">
     PRINCE VYAS
   </text>
 
-  <!-- Fine optical edge -->
-  <text x="110" y="225"
-        class="main"
-        font-size="78"
+  <!-- Optical edge -->
+  <text x="750" y="220"
+        class="name"
+        font-size="108"
+        text-anchor="middle"
         fill="none"
         stroke="url(#rim)"
-        stroke-opacity=".42"
-        stroke-width=".45">
+        stroke-opacity=".48"
+        stroke-width=".55">
     PRINCE VYAS
   </text>
 
+  <!-- Accent -->
+  <rect x="714" y="250" width="72" height="1.4"
+        rx="1"
+        fill="#dce5ed"
+        fill-opacity=".44"/>
+
   <!-- Descriptor -->
-  <text x="112" y="284"
-        class="small"
-        font-size="15"
-        letter-spacing="3.1"
-        fill="#b3bec8"
-        fill-opacity=".48">
+  <text x="750" y="290"
+        class="sub"
+        font-size="18"
+        letter-spacing="4"
+        text-anchor="middle"
+        fill="#c5d0da"
+        fill-opacity=".54">
     AI  /  SYSTEMS  /  TECHNOLOGY
   </text>
 
   <!-- Secondary line -->
-  <text x="112" y="318"
-        class="small"
-        font-size="12"
-        letter-spacing="1.5"
-        fill="#c0c9d1"
-        fill-opacity=".32">
+  <text x="750" y="326"
+        class="sub"
+        font-size="14"
+        letter-spacing="2"
+        text-anchor="middle"
+        fill="#c5d0da"
+        fill-opacity=".38">
     Building · Exploring · Engineering
   </text>
-
-  <!-- Glass micro-reflection accent -->
-  <path d="M112 248 H184"
-        stroke="#dce5ed"
-        stroke-opacity=".40"
-        stroke-width="1.2"
-        stroke-linecap="round"/>
 </svg>
