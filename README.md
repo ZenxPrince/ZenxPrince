@@ -4,7 +4,7 @@
 
 # I'm Prince.
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=400&size=32&pause=1618&color=F5F5F5&center=true&vCenter=true&width=620&lines=AI+%26+Systems+Engineer;Embedded+%7C+Cybersecurity+%7C+FinTech;Building+at+the+Intersection+of+Disciplines;First+Principles.+Real+Systems.+Working+Prototypes." alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=400&size=32&pause=1618&color=F8FAFC&center=true&vCenter=true&width=1000&height=200&lines=AI+%26+Systems+Engineer;Embedded+%7C+Cybersecurity+%7C+FinTech;Building+at+the+Intersection+of+Disciplines;First+Principles.+Real+Systems.+Working+Prototypes." alt="Typing SVG" />
 
 </div>
 
