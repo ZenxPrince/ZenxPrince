@@ -4,7 +4,7 @@
 
 # I'm Prince.
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&pause=1000&color=E53E3E&center=true&vCenter=true&width=620&lines=AI+%26+Systems+Engineer;Embedded+%7C+Cybersecurity+%7C+FinTech;Building+at+the+Intersection+of+Disciplines;First+Principles.+Real+Systems.+Working+Prototypes." alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&pause=1000&color=050505&center=true&vCenter=true&width=620&lines=AI+%26+Systems+Engineer;Embedded+%7C+Cybersecurity+%7C+FinTech;Building+at+the+Intersection+of+Disciplines;First+Principles.+Real+Systems.+Working+Prototypes." alt="Typing SVG" />
 
 </div>
 
@@ -108,7 +108,7 @@ I learn by breaking things down to first principles, building working prototypes
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=C62828&height=100&section=footer&text=&animation=twinkling" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0070D1&height=100&section=footer&text=&animation=twinkling" width="100%" />
 
 <img src="https://komarev.com/ghpvc/?username=ZenxPrince&label=PROFILE+VIEWS&color=E53E3E&style=flat-square" alt="Profile views" />
 
