@@ -1,10 +1,15 @@
 <div align="center">
 
-<img src="https://github.com/TheDudeThatCode/TheDudeThatCode/raw/master/Assets/PC.gif" width="130" alt="Coding at night"/>
+<img src="./assets/coder.gif" width="100%" alt="Coding at night" style="border-radius:12px"/>
 
-# I'm Prince.
+<br/>
+<br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&pause=1000&color=F5F5F5&center=true&vCenter=true&width=620&lines=AI+%26+Systems+Engineer;Embedded+%7C+Cybersecurity+%7C+FinTech;Building+at+the+Intersection+of+Disciplines;First+Principles.+Real+Systems.+Working+Prototypes." alt="Typing SVG" />
+<img src="./assets/header.svg" width="720" alt="I'm Prince."/>
+
+<br/>
+
+**`AI · Systems · FinTech · Embedded · Cybersecurity`**
 
 </div>
 
@@ -108,8 +113,11 @@ I learn by breaking things down to first principles, building working prototypes
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0070D1&height=100&section=footer&text=&animation=twinkling" width="100%" />
+<img src="./assets/waterfall.gif" width="100%" alt="Pixel waterfall" style="border-radius:8px"/>
 
-<img src="https://komarev.com/ghpvc/?username=ZenxPrince&label=PROFILE+VIEWS&color=E53E3E&style=flat-square" alt="Profile views" />
+<br/>
+<br/>
+
+<img src="https://komarev.com/ghpvc/?username=ZenxPrince&label=Profile+Views&color=E53E3E&style=flat-square" alt="Profile views" />
 
 </div>
