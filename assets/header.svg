@@ -1,3 +1,4 @@
+
 <svg xmlns="http://www.w3.org/2000/svg" width="1500" height="420" viewBox="0 0 1500 420">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
@@ -6,35 +7,22 @@
       <stop offset="1" stop-color="#070809"/>
     </linearGradient>
 
-    <radialGradient id="ambient" cx="52%" cy="42%" r="70%">
-      <stop offset="0" stop-color="#34383c" stop-opacity=".45"/>
-      <stop offset=".45" stop-color="#181a1d" stop-opacity=".2"/>
+    <radialGradient id="ambient" cx="55%" cy="43%" r="75%">
+      <stop offset="0" stop-color="#34383c" stop-opacity=".5"/>
+      <stop offset=".5" stop-color="#181a1d" stop-opacity=".2"/>
       <stop offset="1" stop-color="#050607" stop-opacity="0"/>
     </radialGradient>
 
-    <linearGradient id="glass" x1="0" y1="0" x2="0.9" y2="1">
-      <stop offset="0" stop-color="#ffffff" stop-opacity=".105"/>
-      <stop offset=".25" stop-color="#c9cdd2" stop-opacity=".035"/>
-      <stop offset=".65" stop-color="#8c939b" stop-opacity=".018"/>
-      <stop offset="1" stop-color="#ffffff" stop-opacity=".065"/>
-    </linearGradient>
-
-    <linearGradient id="glassHighlight" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset=".28" stop-color="#ffffff" stop-opacity=".15"/>
-      <stop offset=".7" stop-color="#dce1e7" stop-opacity=".035"/>
-      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    <linearGradient id="glass" x1="0" y1="0" x2=".9" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".12"/>
+      <stop offset=".5" stop-color="#c9cdd2" stop-opacity=".025"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".055"/>
     </linearGradient>
 
     <linearGradient id="text" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#d9dcdf"/>
       <stop offset=".45" stop-color="#aeb3b8"/>
       <stop offset="1" stop-color="#71777d"/>
-    </linearGradient>
-
-    <linearGradient id="muted" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#8c9298"/>
-      <stop offset="1" stop-color="#555a60"/>
     </linearGradient>
 
     <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
@@ -46,58 +34,48 @@
     </filter>
 
     <clipPath id="clip">
-      <rect width="1500" height="420" rx="30"/>
+      <rect width="1500" height="420"/>
     </clipPath>
   </defs>
 
   <g clip-path="url(#clip)">
-    <!-- Background -->
+    <!-- Unified background -->
     <rect width="1500" height="420" fill="url(#bg)"/>
     <rect width="1500" height="420" fill="url(#ambient)"/>
 
     <!-- Atmosphere -->
-    <ellipse cx="1060" cy="170" rx="350" ry="190"
-             fill="#6c747b" opacity=".13" filter="url(#blur)"/>
-    <ellipse cx="310" cy="330" rx="390" ry="150"
+    <ellipse cx="1120" cy="180" rx="390" ry="210"
+             fill="#6c747b" opacity=".14" filter="url(#blur)"/>
+    <ellipse cx="310" cy="360" rx="390" ry="150"
              fill="#24282c" opacity=".32" filter="url(#blur)"/>
 
-    <!-- Floating glass forms -->
-    <g opacity=".78">
-      <rect x="1000" y="-65" width="330" height="260" rx="100"
-            transform="rotate(22 1165 65)"
-            fill="url(#glass)" />
+    <!-- Floating glass geometry -->
+    <g opacity=".7">
+      <rect x="1050" y="-90" width="340" height="270" rx="100"
+            transform="rotate(22 1220 45)"
+            fill="url(#glass)"/>
 
-      <rect x="1080" y="-65" width="330" height="260" rx="100"
-            transform="rotate(22 1245 65)"
-            fill="none" stroke="#ffffff" stroke-opacity=".07" stroke-width="1.2"/>
+      <rect x="1190" y="120" width="260" height="220" rx="85"
+            transform="rotate(-25 1320 230)"
+            fill="url(#glass)"/>
 
-      <rect x="1170" y="130" width="230" height="210" rx="80"
-            transform="rotate(-25 1285 235)"
-            fill="url(#glass)" />
+      <rect x="1050" y="-90" width="340" height="270" rx="100"
+            transform="rotate(22 1220 45)"
+            fill="none" stroke="#ffffff" stroke-opacity=".065" stroke-width="1"/>
 
-      <rect x="1170" y="130" width="230" height="210" rx="80"
-            transform="rotate(-25 1285 235)"
-            fill="none" stroke="#ffffff" stroke-opacity=".06" stroke-width="1.2"/>
+      <rect x="1190" y="120" width="260" height="220" rx="85"
+            transform="rotate(-25 1320 230)"
+            fill="none" stroke="#ffffff" stroke-opacity=".055" stroke-width="1"/>
     </g>
 
-    <!-- Glass plane -->
-    <rect x="74" y="58" width="1352" height="304" rx="36"
-          fill="url(#glass)"/>
+    <!-- Subtle ambient reflection -->
+    <path d="M80 70 Q480 10 850 65 T1460 80"
+          fill="none" stroke="#ffffff" stroke-opacity=".035" stroke-width="1"/>
 
-    <rect x="74" y="58" width="1352" height="304" rx="36"
-          fill="none" stroke="#ffffff" stroke-opacity=".075" stroke-width="1.1"/>
+    <!-- Technical marker -->
+    <circle cx="116" cy="108" r="3" fill="#a7adb3" opacity=".8"/>
 
-    <rect x="75" y="59" width="1350" height="2" rx="1"
-          fill="url(#glassHighlight)" opacity=".7"/>
-
-    <!-- Inner light reflection -->
-    <path d="M110 90 Q400 45 720 85 T1350 90"
-          fill="none" stroke="#ffffff" stroke-opacity=".045" stroke-width="1.2"/>
-
-    <!-- Small technical marker -->
-    <circle cx="133" cy="126" r="3" fill="#a7adb3" opacity=".8"/>
-
-    <text x="151" y="131"
+    <text x="134" y="113"
           font-family="Segoe UI, Arial, sans-serif"
           font-size="11" letter-spacing="4"
           fill="#858b91">
@@ -105,20 +83,20 @@
     </text>
 
     <!-- Main typography -->
-    <text x="132" y="220"
+    <text x="110" y="224"
           font-family="Segoe UI, Arial, sans-serif"
-          font-size="65" font-weight="600"
-          letter-spacing="-2.8"
+          font-size="78" font-weight="600"
+          letter-spacing="-3.8"
           fill="url(#text)">
       PRINCE VYAS
     </text>
 
-    <!-- Accent line -->
-    <rect x="134" y="246" width="68" height="1.5"
+    <!-- Accent -->
+    <rect x="114" y="249" width="72" height="1.5"
           rx="1" fill="#a4abb1" opacity=".62"/>
 
     <!-- Descriptor -->
-    <text x="132" y="281"
+    <text x="110" y="286"
           font-family="Segoe UI, Arial, sans-serif"
           font-size="15" font-weight="400"
           letter-spacing="3.1"
@@ -126,42 +104,38 @@
       AI  /  SYSTEMS  /  TECHNOLOGY
     </text>
 
-    <!-- Secondary line -->
-    <text x="132" y="315"
+    <!-- Secondary -->
+    <text x="110" y="320"
           font-family="Segoe UI, Arial, sans-serif"
           font-size="12" letter-spacing="1.5"
           fill="#646a70">
       Building · Exploring · Engineering
     </text>
 
-    <!-- Right-side spatial element -->
-    <g transform="translate(1190 210)">
-      <circle r="105" fill="none" stroke="#ffffff" stroke-opacity=".035" stroke-width="1"/>
-      <circle r="82" fill="none" stroke="#ffffff" stroke-opacity=".045" stroke-width="1"/>
-      <circle r="60" fill="none" stroke="#ffffff" stroke-opacity=".065" stroke-width="1"/>
+    <!-- Spatial element -->
+    <g transform="translate(1250 215)">
+      <circle r="115" fill="none" stroke="#ffffff" stroke-opacity=".035" stroke-width="1"/>
+      <circle r="88" fill="none" stroke="#ffffff" stroke-opacity=".045" stroke-width="1"/>
+      <circle r="62" fill="none" stroke="#ffffff" stroke-opacity=".065" stroke-width="1"/>
 
-      <ellipse rx="105" ry="42" transform="rotate(-35)"
+      <ellipse rx="115" ry="44" transform="rotate(-35)"
                fill="none" stroke="#b5bcc3" stroke-opacity=".09" stroke-width="1"/>
 
-      <ellipse rx="105" ry="42" transform="rotate(35)"
+      <ellipse rx="115" ry="44" transform="rotate(35)"
                fill="none" stroke="#b5bcc3" stroke-opacity=".06" stroke-width="1"/>
 
-      <circle r="27" fill="url(#glass)" stroke="#ffffff" stroke-opacity=".13"/>
+      <circle r="30" fill="url(#glass)" stroke="#ffffff" stroke-opacity=".13"/>
       <circle r="13" fill="#c6ccd1" opacity=".12" filter="url(#softShadow)"/>
       <circle r="4" fill="#d4d8dc" opacity=".75"/>
     </g>
 
-    <!-- Corner details -->
-    <text x="1334" y="325"
+    <!-- Corner metadata -->
+    <text x="1390" y="350"
           font-family="Segoe UI, Arial, sans-serif"
           font-size="10" letter-spacing="2"
           text-anchor="end"
           fill="#63696f">
       01 / SYSTEMS
     </text>
-
-    <!-- Bottom fade -->
-    <rect x="74" y="352" width="1352" height="10"
-          fill="#050607" opacity=".15"/>
   </g>
 </svg>
