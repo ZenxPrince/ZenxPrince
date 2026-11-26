@@ -1,96 +1,167 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120" xmlns:c2pa="http://c2pa.org/manifest">
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="420" viewBox="0 0 1500 420">
   <defs>
-    <filter id="blur1" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="8" result="blur"/>
-    </filter>
-    <filter id="glass" x="-5%" y="-5%" width="110%" height="110%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-    </filter>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0a0a0f;stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:#0d0d1a;stop-opacity:1"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08090b"/>
+      <stop offset=".48" stop-color="#111316"/>
+      <stop offset="1" stop-color="#070809"/>
     </linearGradient>
-    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.07"/>
-      <stop offset="50%" style="stop-color:#ffffff;stop-opacity:0.03"/>
-      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.06"/>
-    </linearGradient>
-    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.25"/>
-      <stop offset="40%" style="stop-color:#ff3b3b;stop-opacity:0.4"/>
-      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.1"/>
-    </linearGradient>
-    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1"/>
-      <stop offset="45%" style="stop-color:#e8e8e8;stop-opacity:1"/>
-      <stop offset="55%" style="stop-color:#ff4444;stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:#cc2222;stop-opacity:1"/>
-    </linearGradient>
-    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#ff3b3b;stop-opacity:0"/>
-      <stop offset="50%" style="stop-color:#ff3b3b;stop-opacity:0.3"/>
-      <stop offset="100%" style="stop-color:#ff3b3b;stop-opacity:0"/>
-    </linearGradient>
-    <radialGradient id="glowCenter" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" style="stop-color:#ff3b3b;stop-opacity:0.15"/>
-      <stop offset="100%" style="stop-color:#ff3b3b;stop-opacity:0"/>
+
+    <radialGradient id="ambient" cx="52%" cy="42%" r="70%">
+      <stop offset="0" stop-color="#34383c" stop-opacity=".45"/>
+      <stop offset=".45" stop-color="#181a1d" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#050607" stop-opacity="0"/>
     </radialGradient>
-    <clipPath id="roundedClip">
-      <rect x="40" y="20" width="720" height="80" rx="20" ry="20"/>
+
+    <linearGradient id="glass" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".105"/>
+      <stop offset=".25" stop-color="#c9cdd2" stop-opacity=".035"/>
+      <stop offset=".65" stop-color="#8c939b" stop-opacity=".018"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".065"/>
+    </linearGradient>
+
+    <linearGradient id="glassHighlight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset=".28" stop-color="#ffffff" stop-opacity=".15"/>
+      <stop offset=".7" stop-color="#dce1e7" stop-opacity=".035"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="text" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d9dcdf"/>
+      <stop offset=".45" stop-color="#aeb3b8"/>
+      <stop offset="1" stop-color="#71777d"/>
+    </linearGradient>
+
+    <linearGradient id="muted" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8c9298"/>
+      <stop offset="1" stop-color="#555a60"/>
+    </linearGradient>
+
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="65"/>
+    </filter>
+
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+
+    <clipPath id="clip">
+      <rect width="1500" height="420" rx="30"/>
     </clipPath>
   </defs>
 
-  <!-- Dark background -->
-  <rect width="800" height="120" fill="url(#bgGrad)"/>
+  <g clip-path="url(#clip)">
+    <!-- Background -->
+    <rect width="1500" height="420" fill="url(#bg)"/>
+    <rect width="1500" height="420" fill="url(#ambient)"/>
 
-  <!-- Glow behind glass -->
-  <ellipse cx="400" cy="60" rx="300" ry="40" fill="url(#glowCenter)" filter="url(#blur1)"/>
+    <!-- Atmosphere -->
+    <ellipse cx="1060" cy="170" rx="350" ry="190"
+             fill="#6c747b" opacity=".13" filter="url(#blur)"/>
+    <ellipse cx="310" cy="330" rx="390" ry="150"
+             fill="#24282c" opacity=".32" filter="url(#blur)"/>
 
-  <!-- Glass panel backdrop blur simulation -->
-  <rect x="40" y="20" width="720" height="80" rx="20" ry="20"
-        fill="#111118" opacity="0.6"/>
+    <!-- Floating glass forms -->
+    <g opacity=".78">
+      <rect x="1000" y="-65" width="330" height="260" rx="100"
+            transform="rotate(22 1165 65)"
+            fill="url(#glass)" />
 
-  <!-- Glass fill -->
-  <rect x="40" y="20" width="720" height="80" rx="20" ry="20"
-        fill="url(#glassGrad)"/>
+      <rect x="1080" y="-65" width="330" height="260" rx="100"
+            transform="rotate(22 1245 65)"
+            fill="none" stroke="#ffffff" stroke-opacity=".07" stroke-width="1.2"/>
 
-  <!-- Glass border -->
-  <rect x="40" y="20" width="720" height="80" rx="20" ry="20"
-        fill="none" stroke="url(#borderGrad)" stroke-width="1.2" opacity="0.9"/>
+      <rect x="1170" y="130" width="230" height="210" rx="80"
+            transform="rotate(-25 1285 235)"
+            fill="url(#glass)" />
 
-  <!-- Inner top highlight (light refraction) -->
-  <rect x="42" y="21" width="716" height="2" rx="1" fill="white" opacity="0.08"
-        clip-path="url(#roundedClip)"/>
+      <rect x="1170" y="130" width="230" height="210" rx="80"
+            transform="rotate(-25 1285 235)"
+            fill="none" stroke="#ffffff" stroke-opacity=".06" stroke-width="1.2"/>
+    </g>
 
-  <!-- Bottom inner edge -->
-  <rect x="42" y="97" width="716" height="1.5" rx="1" fill="white" opacity="0.04"
-        clip-path="url(#roundedClip)"/>
+    <!-- Glass plane -->
+    <rect x="74" y="58" width="1352" height="304" rx="36"
+          fill="url(#glass)"/>
 
-  <!-- Red accent glow line under text -->
-  <rect x="160" y="93" width="480" height="1" rx="1" fill="url(#glowGrad)" opacity="0.8"/>
+    <rect x="74" y="58" width="1352" height="304" rx="36"
+          fill="none" stroke="#ffffff" stroke-opacity=".075" stroke-width="1.1"/>
 
-  <!-- Main text: I'm Prince. -->
-  <text x="400" y="73"
-        font-family="'SF Pro Display', 'Helvetica Neue', Arial, sans-serif"
-        font-size="38"
-        font-weight="800"
-        letter-spacing="-1"
-        text-anchor="middle"
-        fill="url(#textGrad)">I'm Prince.</text>
+    <rect x="75" y="59" width="1350" height="2" rx="1"
+          fill="url(#glassHighlight)" opacity=".7"/>
 
-  <!-- Subtle text shadow layer -->
-  <text x="401" y="74"
-        font-family="'SF Pro Display', 'Helvetica Neue', Arial, sans-serif"
-        font-size="38"
-        font-weight="800"
-        letter-spacing="-1"
-        text-anchor="middle"
-        fill="#ff3b3b"
-        opacity="0.15">I'm Prince.</text>
+    <!-- Inner light reflection -->
+    <path d="M110 90 Q400 45 720 85 T1350 90"
+          fill="none" stroke="#ffffff" stroke-opacity=".045" stroke-width="1.2"/>
 
-  <!-- Left glare highlight on glass -->
-  <ellipse cx="120" cy="45" rx="60" ry="15" fill="white" opacity="0.025"
-           clip-path="url(#roundedClip)"/>
+    <!-- Small technical marker -->
+    <circle cx="133" cy="126" r="3" fill="#a7adb3" opacity=".8"/>
 
-<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo3OTBmODgwNy00OTVlLTQzODYtOGU0Zi05NWFiMmVkOTJlODkAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaPh/eVxYzK0a0d4rtuw7c38AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDphM2E1Y2JlYS04OTBjLTQ5YjktYmMwNS02MGFkNzExY2FjZTFscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoW4JcI/oSEfsunRv9VlHeOQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggfYIHZfs19t2U5G3+mUodQdXJW60tn3p5feNutKisfOqkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaGce3yqR9O8BGV9GyqrZ8hAAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYINc/TCuDsHU1oKhGSATEgSYy8aY9G5ED0gPiYSujnKwiZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GRB8Zmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjc5MGY4ODA3LTQ5NWUtNDM4Ni04ZTRmLTk1YWIyZWQ5MmU4OS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjA0NGEwYzZmLTcyNmItNDk5Yi05M2NlLWUwNTIyZTY4ZGFmN3JjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCB9ggdl+zX23ZTkbf6ZSh1B1clbrS2fenl94260qKx86qJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggXfpYAr7/YvKdk1zf67SFTnZt9ZmmbvEOb/rg04/QGy+iY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg9I7qEgM4q+NeKPuWZl2grREnXeJqWoXt6c+CrKP3SeR0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQAzMCcOXhLjobpt7FqTLNRGvDTzRTfWOZXyxv2NaDSjSHes0BO1RuJpqAYqsPisclsKC2/eLpRamkr1XBx5bXyM=</c2pa:manifest></metadata></svg>
+    <text x="151" y="131"
+          font-family="Segoe UI, Arial, sans-serif"
+          font-size="11" letter-spacing="4"
+          fill="#858b91">
+      INDEPENDENT ENGINEERING
+    </text>
+
+    <!-- Main typography -->
+    <text x="132" y="220"
+          font-family="Segoe UI, Arial, sans-serif"
+          font-size="65" font-weight="600"
+          letter-spacing="-2.8"
+          fill="url(#text)">
+      PRINCE VYAS
+    </text>
+
+    <!-- Accent line -->
+    <rect x="134" y="246" width="68" height="1.5"
+          rx="1" fill="#a4abb1" opacity=".62"/>
+
+    <!-- Descriptor -->
+    <text x="132" y="281"
+          font-family="Segoe UI, Arial, sans-serif"
+          font-size="15" font-weight="400"
+          letter-spacing="3.1"
+          fill="#8b9197">
+      AI  /  SYSTEMS  /  TECHNOLOGY
+    </text>
+
+    <!-- Secondary line -->
+    <text x="132" y="315"
+          font-family="Segoe UI, Arial, sans-serif"
+          font-size="12" letter-spacing="1.5"
+          fill="#646a70">
+      Building · Exploring · Engineering
+    </text>
+
+    <!-- Right-side spatial element -->
+    <g transform="translate(1190 210)">
+      <circle r="105" fill="none" stroke="#ffffff" stroke-opacity=".035" stroke-width="1"/>
+      <circle r="82" fill="none" stroke="#ffffff" stroke-opacity=".045" stroke-width="1"/>
+      <circle r="60" fill="none" stroke="#ffffff" stroke-opacity=".065" stroke-width="1"/>
+
+      <ellipse rx="105" ry="42" transform="rotate(-35)"
+               fill="none" stroke="#b5bcc3" stroke-opacity=".09" stroke-width="1"/>
+
+      <ellipse rx="105" ry="42" transform="rotate(35)"
+               fill="none" stroke="#b5bcc3" stroke-opacity=".06" stroke-width="1"/>
+
+      <circle r="27" fill="url(#glass)" stroke="#ffffff" stroke-opacity=".13"/>
+      <circle r="13" fill="#c6ccd1" opacity=".12" filter="url(#softShadow)"/>
+      <circle r="4" fill="#d4d8dc" opacity=".75"/>
+    </g>
+
+    <!-- Corner details -->
+    <text x="1334" y="325"
+          font-family="Segoe UI, Arial, sans-serif"
+          font-size="10" letter-spacing="2"
+          text-anchor="end"
+          fill="#63696f">
+      01 / SYSTEMS
+    </text>
+
+    <!-- Bottom fade -->
+    <rect x="74" y="352" width="1352" height="10"
+          fill="#050607" opacity=".15"/>
+  </g>
+</svg>
