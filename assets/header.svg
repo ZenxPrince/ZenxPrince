@@ -55,7 +55,7 @@
   </style>
 
   <!-- Upper label -->
-  <text x="790" y="92"
+  <text x="735" y="92"
         text-anchor="middle"
         font-family="Segoe UI, Arial, sans-serif"
         font-size="19"
@@ -66,7 +66,7 @@
   </text>
 
   <!-- Soft shadow -->
-  <text x="790" y="205"
+  <text x="735" y="205"
         text-anchor="middle"
         class="name"
         font-size="142"
@@ -77,7 +77,7 @@
   </text>
 
   <!-- Glass body -->
-  <text x="790" y="205"
+  <text x="735" y="205"
         text-anchor="middle"
         class="name"
         font-size="142"
@@ -89,7 +89,7 @@
   </text>
 
   <!-- Refractive reflection -->
-  <text x="790" y="205"
+  <text x="735" y="205"
         text-anchor="middle"
         class="name"
         font-size="142"
@@ -99,7 +99,7 @@
   </text>
 
   <!-- Edge refraction -->
-  <text x="790" y="205"
+  <text x="735" y="205"
         text-anchor="middle"
         class="name"
         font-size="142"
@@ -111,7 +111,7 @@
   </text>
 
   <!-- Specular highlights -->
-  <text x="790" y="205"
+  <text x="735" y="205"
         text-anchor="middle"
         class="name"
         font-size="142"
@@ -124,11 +124,11 @@
   </text>
 
   <!-- Accent -->
-  <rect x="772" y="239" width="76" height="2"
+  <rect x="717" y="239" width="76" height="2"
         fill="#dce5ed" opacity="0.4"/>
 
   <!-- Descriptor -->
-  <text x="790" y="295"
+  <text x="735" y="295"
         text-anchor="middle"
         class="sub"
         font-size="26"
@@ -139,7 +139,7 @@
   </text>
 
   <!-- Secondary line -->
-  <text x="790" y="352"
+  <text x="735" y="352"
         text-anchor="middle"
         class="sub"
         font-size="21"
